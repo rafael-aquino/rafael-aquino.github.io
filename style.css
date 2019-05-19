@@ -3,14 +3,22 @@
  html {
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0;    
+  }
+  *{
+   overflow-x: hidden;
   }
   
   img {  
-    height: 100vh;
-    min-width: 60vw;
+    display: block;
+    width: 100%;
+    height: auto;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+  }
+
+  .desk{
+    width: 100vw;
   }
   
   .box {
@@ -53,8 +61,48 @@
     padding: 0.5em;
   }
 
-  @media (max-width: 1000px) {
-    img {
-      display: none;
-    }
+  p footer{    
+    padding: 0;
   }
+
+  footer{
+    background-color: rgba(0,0,0,0.9);
+    padding: 0;
+  }
+
+
+  a.svg {
+    position: relative;
+    display: inline-block;
+    padding: 0 1em;
+    padding-top: 0.5em;
+
+  }
+   a.svg:after {
+     content: ""; 
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left:0;
+   }
+   object {
+     width: 100%;
+   }
+  @media (max-width: 800px) {
+    #img, img {
+      display:none;
+    }
+
+  }
+  @media (max-width: 1165px) {
+    .box{
+      display: block;
+    }
+    p{
+      text-align: center;
+      margin: 0.5em 2em;
+    }
+
+  }
+
