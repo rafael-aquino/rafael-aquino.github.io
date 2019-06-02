@@ -1,4 +1,4 @@
-* {
+html {
   background-color: #2d2d2d;
   color: #b3b9c5; }
 
@@ -6,6 +6,7 @@
   background-image: url("/assets/images/spotlight.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-color: #2d2d2d;
   /* put the height and width of your image here */
   height: 32px;
   width: 32px;
