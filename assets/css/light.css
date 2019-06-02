@@ -1,0 +1,17 @@
+* {
+  background-color: white;
+  color: #2d2d2d; }
+
+#btn {
+  background-image: url("/assets/images/spotlight.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height: 32px;
+  width: 32px;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  border: none;
+  cursor: pointer;
+  background-color: white; }
