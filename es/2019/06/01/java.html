@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="has-navbar-fixed-top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,22 @@
   
 
     <!-- <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"> -->
-    <meta property="og:description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador.">
+    <meta property="og:description" content="En este articulo hare una breve revisión de algunos aspectos de Java">
     <meta property="og:title" content="Java">
     <meta name="twitter:title" content="Java">
-    <meta name="twitter:description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador.">
+    <meta name="twitter:description" content="En este articulo hare una breve revisión de algunos aspectos de Java">
     <title>Java</title>
 
 
 
-
+<link rel="stylesheet" type="text/css" title="light" href="/assets/css/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 <link rel="stylesheet" type="text/css" title="light" href="/assets/css/light.css">
 <link rel="alternate stylesheet" type="text/css" title="dark" href="/assets/css/dark.css">
-<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/tomorrow-night-bright.min.css">
+<link rel="shortcut icon" href="/assets/images/hairstyle.png" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/nord.min.css">
+
+
 
 
  
@@ -30,45 +33,18 @@
 
 
 <body onload="set_style_from_cookie()">
-   <input  type="button" id="btn" value=""  onclick="toggleState(this)" />
-  
-
-  
-    
-    <nav>
-    
-        <a href="/es" >Inicio</a>
-    
-        <a href="/es/el-salvador.html" >El Salvador</a>
-    
-        <a href="/es/rafael.html" >Hola</a>
-    
-        <a href="/es/aprendizaje.html" >Área de Aprendizaje</a>
-    
-</nav>
-    
-  
-  
-  
-  <div class="lang">
-        <em>Idiomas disponibles:</em>
-    <ul>
-      
-
-  </ul>
-  </div>
-    
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- 
 
 
 <div class="lang">
   <ul>
     
-      <li><a class="en" href="/2019/06/01/java.html">English</a></li>
-    
       <li><a class="es" href="/es/2019/06/01/java.html">Español</a></li>
     
   </ul>
-</div>
+</div> -->
 
 <h1>Java</h1>
 
@@ -80,13 +56,13 @@
   
 </p>
 
-<p>Esta es una revisión de algunas funcionalidades de este lenguaje, veremos algunos conceptos y técnicas fundamentales.</p>
+<h1 id="esta-es-una-revisión-de-algunas-funcionalidades-de-este-lenguaje-veremos-algunos-conceptos-y-técnicas-fundamentales">Esta es una revisión de algunas funcionalidades de este lenguaje, veremos algunos conceptos y técnicas fundamentales.</h1>
 
 <p>Tú podrias pensar: ¿Porque debería tomarme la molestia de aprender este “viejo lenguaje”, cuando actualmente hay mejores opciones? bueno dejame decirte que programar en Java es una habilidad importante porque te permite tener un buen punto de referencia y comparación. Apartir de ahí se te facilitará entender leguajes con diferentes niveles de abstracción, lo cuales interpretaras  con mayor rápidez si tienes a Java en tu caja de herramientas.</p>
 
 <p>Tambien es importante mencionar que Java no solo es un lenguaje, es una plataforma que esta en constante crecimiento y evolución. Posee actualmente una amplia comunidad de desarrolladores y forma parte fundamental del ambiente corporativo donde herramientas como Spring Framework, Hibernate u Oracle poseen una fuerte presencia y cuota de mercado.</p>
 
-<pre>
+<pre class="hightlight">
     <code class="java">
     package hello;
 
@@ -118,9 +94,67 @@
 
 
 
+        </div>
+        <footer id="footer" class="footer">
+            
+        <div class="container">
+          <div class="content has-text-centered">
+            <p>
+              by Rafael E. Aquino. The source code is licensed
+              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+          </div>
+        </div>
 
+
+        </footer>
+      </div>
+  <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
+   
+    <div class="navbar-item">
+          
+          
+          
+    
+        <a href="/es" class="main-nav">Inicio</a>
+    
+        <a href="/es/el-salvador.html" class="main-nav">El Salvador</a>
+    
+        <a href="/es/rafael.html" class="main-nav">Hola</a>
+    
+        <a href="/es/aprendizaje.html" class="main-nav">Área de Aprendizaje</a>
+    
+
+          
+      </div>
+
+    <a class="navbar-item right-corner" style="background-color: black;">
+        <input  type="button" id="btn" value=""  onclick="toggleState(this)" />
+    </a>
+    <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Idiomas disponibles
+        </a>
+    
+        <div class="navbar-dropdown">
+            
+  
+          
+        </div>
+      </div>
+
+  </nav>
+   
+  
+
+
+
+
+
+    
   <script src="/assets/js/theme.js"></script>    
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
 

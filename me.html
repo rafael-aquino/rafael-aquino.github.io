@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,22 @@
   
 
     <!-- <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"> -->
-    <meta property="og:description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador.">
+    <meta property="og:description" content="I'm a Software Developer">
     <meta property="og:title" content="Me">
     <meta name="twitter:title" content="Me">
-    <meta name="twitter:description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador.">
+    <meta name="twitter:description" content="I'm a Software Developer">
     <title>Me</title>
 
 
 
-
+<link rel="stylesheet" type="text/css" title="light" href="/assets/css/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 <link rel="stylesheet" type="text/css" title="light" href="/assets/css/light.css">
 <link rel="alternate stylesheet" type="text/css" title="dark" href="/assets/css/dark.css">
-<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/tomorrow-night-bright.min.css">
+<link rel="shortcut icon" href="/assets/images/hairstyle.png" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/nord.min.css">
+
+
 
 
  
@@ -30,44 +33,93 @@
 
 
 <body onload="set_style_from_cookie()">
-   <input  type="button" id="btn" value=""  onclick="toggleState(this)" />
-  
-
-    
-    <nav>
-    
-        <a href="/" >Home</a>
-    
-        <a href="/el-salvador.html" >El Salvador</a>
-    
-        <a href="/me.html" class="current">Me</a>
-    
-        <a href="/learn.html" >Learning Area</a>
-    
-</nav>
-  
-    
-  
-  
-  
-  <div class="lang">
-        <em>Avaible languages:</em>
-    <ul>
-      
-        <li><a class="en" href="/me.html">English</a></li>
-      
-        <li><a class="es" href="/es/rafael.html">Español</a></li>
-      
-
-  </ul>
-  </div>
-    <h1 id="about-me">About me</h1>
+    <div id="page-container">
+        <div id="content-wrap">
+            <h1 id="about-me">About me</h1>
 
 <p>This page tells you a little bit about me.</p>
 
+        </div>
+        <footer id="footer" class="footer">
+            
+        <div class="container">
+          <div class="content has-text-centered">
+            <p>
+              by Rafael E. Aquino. The source code is licensed
+              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+          </div>
+        </div>
 
+
+        </footer>
+      </div>
+  <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
+   
+    <div class="navbar-item">
+            
+          
+    
+        <a href="/" class="main-nav">Home</a>
+    
+        <a href="/el-salvador.html" class="main-nav">El Salvador</a>
+    
+        <a href="/me.html" class="main-nav">Me</a>
+    
+        <a href="/learn.html" class="main-nav">Learning Area</a>
+    
+
+        
+          
+      </div>
+
+    <a class="navbar-item right-corner" style="background-color: black;">
+        <input  type="button" id="btn" value=""  onclick="toggleState(this)" />
+    </a>
+    <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Avaible languages
+        </a>
+    
+        <div class="navbar-dropdown">
+            
+  
+          
+          
+                   
+  
+        <a class="navbar-item" href="/me.html">English &nbsp;  
+            
+          
+          </a> 
+
+     
+        
+          
+                   
+  
+        <a class="navbar-item" href="/es/rafael.html">Español &nbsp;  
+            
+          
+          </a> 
+
+     
+        
+        </div>
+      </div>
+
+  </nav>
+   
+  
+
+
+
+
+
+    
   <script src="/assets/js/theme.js"></script>    
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
 

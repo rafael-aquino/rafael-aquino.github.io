@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="has-navbar-fixed-top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,22 @@
   
 
     <!-- <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"> -->
-    <meta property="og:description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador.">
+    <meta property="og:description" content="Nuestro objetivo como nación es convertirnos en un referente a nivel mundial sobre  como aprender de los errores y prosperar.">
     <meta property="og:title" content="El Salvador">
     <meta name="twitter:title" content="El Salvador">
-    <meta name="twitter:description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador.">
+    <meta name="twitter:description" content="Nuestro objetivo como nación es convertirnos en un referente a nivel mundial sobre  como aprender de los errores y prosperar.">
     <title>El Salvador</title>
 
 
 
-
+<link rel="stylesheet" type="text/css" title="light" href="/assets/css/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 <link rel="stylesheet" type="text/css" title="light" href="/assets/css/light.css">
 <link rel="alternate stylesheet" type="text/css" title="dark" href="/assets/css/dark.css">
-<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/tomorrow-night-bright.min.css">
+<link rel="shortcut icon" href="/assets/images/hairstyle.png" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/nord.min.css">
+
+
 
 
  
@@ -30,44 +33,15 @@
 
 
 <body onload="set_style_from_cookie()">
-   <input  type="button" id="btn" value=""  onclick="toggleState(this)" />
-  
-
-  
-    
-    <nav>
-    
-        <a href="/es" >Inicio</a>
-    
-        <a href="/es/el-salvador.html" class="current">El Salvador</a>
-    
-        <a href="/es/rafael.html" >Hola</a>
-    
-        <a href="/es/aprendizaje.html" >Área de Aprendizaje</a>
-    
-</nav>
-    
-  
-  
-  
-  <div class="lang">
-        <em>Idiomas disponibles:</em>
-    <ul>
-      
-        <li><a class="en" href="/el-salvador.html">English</a></li>
-      
-        <li><a class="es" href="/es/el-salvador.html">Español</a></li>
-      
-
-  </ul>
-  </div>
-    <h1 id="nosotros-tenemos-muchas-cosas-positivas-que-compartir-con-el-mundo">Nosotros tenemos muchas cosas positivas que compartir con el mundo.</h1>
+    <div id="page-container">
+        <div id="content-wrap">
+            <h1 id="nosotros-tenemos-muchas-cosas-positivas-que-compartir-con-el-mundo">Nosotros tenemos muchas cosas positivas que compartir con el mundo.</h1>
 
 <p>Es muy probable que sea la primera ves que tu escuchas sobre nuestro país, El Salvador.
 La mayoria del tiempo cuando se habla de nosotros, tu solo escuchas malas noticias o los problemas que estamos enfrentando.
-Pero por favor permiteme compartir contigo algunas de las personas y projectos más inspiradores e innovadores que hay en nuestro país, nuestra meta y destino como nación es convertirnos en un referente a nivel mundial  sobre como aprender de los errores y prosperar.</p>
+Pero por favor permiteme compartir contigo algunas de las personas y projectos más inspiradores e innovadores que hay en nuestro país, nuestra meta y destino como nación es convertirnos en un referente a nivel mundial sobre como aprender de los errores y prosperar.</p>
 
-<h2 id="compañias-tecnologicas">Compañias Tecnologicas</h2>
+<h2 id="compañias">Compañias</h2>
 
 <ul>
   <li>Elaniin Tech Company</li>
@@ -84,7 +58,7 @@ Pero por favor permiteme compartir contigo algunas de las personas y projectos m
   <li>José Giammattei</li>
 </ul>
 
-<h2 id="musica">Musica</h2>
+<h2 id="música">Música</h2>
 
 <ul>
   <li>Cartas a Felice</li>
@@ -93,9 +67,87 @@ Pero por favor permiteme compartir contigo algunas de las personas y projectos m
 </ul>
 
 
+        </div>
+        <footer id="footer" class="footer">
+            
+        <div class="container">
+          <div class="content has-text-centered">
+            <p>
+              by Rafael E. Aquino. The source code is licensed
+              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+          </div>
+        </div>
 
+
+        </footer>
+      </div>
+  <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
+   
+    <div class="navbar-item">
+          
+          
+          
+    
+        <a href="/es" class="main-nav">Inicio</a>
+    
+        <a href="/es/el-salvador.html" class="main-nav">El Salvador</a>
+    
+        <a href="/es/rafael.html" class="main-nav">Hola</a>
+    
+        <a href="/es/aprendizaje.html" class="main-nav">Área de Aprendizaje</a>
+    
+
+          
+      </div>
+
+    <a class="navbar-item right-corner" style="background-color: black;">
+        <input  type="button" id="btn" value=""  onclick="toggleState(this)" />
+    </a>
+    <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Idiomas disponibles
+        </a>
+    
+        <div class="navbar-dropdown">
+            
+  
+          
+          
+                   
+  
+        <a class="navbar-item" href="/el-salvador.html">English &nbsp;  
+            
+          
+          </a> 
+
+     
+        
+          
+                   
+  
+        <a class="navbar-item" href="/es/el-salvador.html">Español &nbsp;  
+            
+          
+          </a> 
+
+     
+        
+        </div>
+      </div>
+
+  </nav>
+   
+  
+
+
+
+
+
+    
   <script src="/assets/js/theme.js"></script>    
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
 
