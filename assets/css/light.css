@@ -14,7 +14,8 @@ body {
   background-color: #2e3440; }
 
 .hightlight {
-  margin: 0 2em; }
+  margin: 0 2em;
+  padding: 1em 0; }
 
 .lion {
   background-color: black; }
@@ -54,5 +55,6 @@ ul, h1, h2, p {
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding: 0;
   height: 2.5rem;
   /* Footer height */ }
