@@ -34,7 +34,7 @@ body {
 #btn:hover {
   background-color: black; }
 
-ul, h1, h2, p {
+ul, h1, h2, h3, p {
   margin: 0.5em 2em; }
 
 .main-nav {

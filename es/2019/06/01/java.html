@@ -8,10 +8,10 @@
   
 
     <!-- <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"> -->
-    <meta property="og:description" content="En este articulo hare una breve revisión de algunos aspectos de Java">
+    <meta property="og:description" content="En este artículo hare una breve revisión de algunos aspectos de Java">
     <meta property="og:title" content="Java">
     <meta name="twitter:title" content="Java">
-    <meta name="twitter:description" content="En este articulo hare una breve revisión de algunos aspectos de Java">
+    <meta name="twitter:description" content="En este artículo hare una breve revisión de algunos aspectos de Java">
     <title>Java</title>
 
 
@@ -58,31 +58,210 @@
 
 <h1 id="esta-es-una-revisión-de-algunas-funcionalidades-de-este-lenguaje-veremos-algunos-conceptos-y-técnicas-fundamentales">Esta es una revisión de algunas funcionalidades de este lenguaje, veremos algunos conceptos y técnicas fundamentales.</h1>
 
-<p>Tú podrias pensar: ¿Porque debería tomarme la molestia de aprender este “viejo lenguaje”, cuando actualmente hay mejores opciones? bueno dejame decirte que programar en Java es una habilidad importante porque te permite tener un buen punto de referencia y comparación. Apartir de ahí se te facilitará entender leguajes con diferentes niveles de abstracción, lo cuales interpretaras  con mayor rápidez si tienes a Java en tu caja de herramientas.</p>
+<p>Tú podrias pensar: ¿Porque debería tomarme la molestia de aprender este “viejo lenguaje”, cuando actualmente hay mejores opciones?. Bueno dejame decirte que programar en Java es una habilidad importante porque te permite tener un buen punto de referencia y comparación. Apartir de ahí se te facilitará entender leguajes con diferentes niveles de abstracción, los cuales interpretaras  con mayor rápidez si tienes a Java en tu caja de herramientas.</p>
 
 <p>Tambien es importante mencionar que Java no solo es un lenguaje, es una plataforma que esta en constante crecimiento y evolución. Posee actualmente una amplia comunidad de desarrolladores y forma parte fundamental del ambiente corporativo donde herramientas como Spring Framework, Hibernate u Oracle poseen una fuerte presencia y cuota de mercado.</p>
 
+<h2 id="enumeraciones">Enumeraciones</h2>
+<p>Es recomendable utilizarlas para tener un mejor control sobre los estados en que se encuentran nuestras aplicaciones.
+A que me refiero, bueno algunas veces podemos decir que el estado de un usuario es activo si estado == 1 ó inactivo si estado == 0. Pero esto puede conducir a errores sútiles y dificiles de encontrar ya que si no existe documentación o algún comentario que especifique lo que cada valor significa, habran muchos dolores de cabeza tratando de resolver este acertijo.</p>
+
+<h3 id="aplicación-del-concepto-craps-game">Aplicación del concepto (Craps Game)</h3>
 <pre class="hightlight">
-    <code class="java">
-    package hello;
+    <code class="java">    
+    package dev.rafaelaquino.core;
 
-    import java.util.concurrent.atomic.AtomicLong;
-    import org.springframework.web.bind.annotation.RequestMapping;
-    import org.springframework.web.bind.annotation.RequestParam;
-    import org.springframework.web.bind.annotation.RestController;
+    import java.util.Random;
+    import static java.lang.System.out;
 
-    @RestController
-    public class GreetingController {
-
-        private static final String template = "Hello, %s!";
-        private final AtomicLong counter = new AtomicLong();
-
-        @RequestMapping("/greeting")
-        public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-            return new Greeting(counter.incrementAndGet(),
-                                String.format(template, name));
+    public class Craps {
+        
+        // Generador de valores aleatorios
+        private static final Random generador = new Random();
+        
+        private enum Estado {CONTINUA, GANO, PERDIO}; 
+        
+        // Tiros frecuentes de los dados
+        private static final int DOS_UNO = 2;
+        private static final int TRES = 3;
+        private static final int SIETE = 7;
+        private static final int ONCE = 11;
+        private static final int DOCE = 12;	
+        
+        public static void main(String[] args) {
+            
+            int miTiro = 0;
+            Estado estadoJuego;
+            
+            int sumaDeDados = tirarDados();
+            
+            switch(sumaDeDados) {
+            case SIETE: 
+            case ONCE:
+                estadoJuego = Estado.GANO;
+                break;
+            case DOS_UNO:
+            case TRES:
+            case DOCE:
+                estadoJuego = Estado.PERDIO;
+                break;
+            default:
+                estadoJuego = Estado.CONTINUA;
+                miTiro = sumaDeDados;
+                out.printf("El punto es %d\n", miTiro);
+                break;			
+            }
+            
+            while( estadoJuego == Estado.CONTINUA ) {
+                sumaDeDados = tirarDados();
+                if( sumaDeDados == miTiro ) {
+                    estadoJuego = Estado.GANO;
+                }else{
+                    if(sumaDeDados == SIETE ) {
+                        estadoJuego = Estado.PERDIO;
+                    }
+                }
+            }
+            
+            if( estadoJuego == Estado.GANO ) {
+                out.println("El jugador gana");
+            }else {
+                out.println("El jugador pierde");		
+            }
         }
+
+        // Importante señalar que los métodos static solo pueden llamar a otros métodos static
+        private static int tirarDados() {
+            int dado1 = 1 + generador.nextInt(6);
+            int dado2 = 1 + generador.nextInt(6);
+            
+            int suma = dado1 + dado2;
+            out.printf("El juador tiro %d + %d = %d\n", dado1, dado2, suma);
+            return suma;
+        }
+
     }
+    </code>
+</pre>
+
+<h2 id="arreglos">Arreglos</h2>
+<p>Los arreglos se crean con las siguientes notaciones donde T puede ser cualquier tipo por referencia o cualquier tipo primitivo y n ∈ ℕ+</p>
+
+<p>T[] valores = new T[n];</p>
+
+<p>ó</p>
+
+<p>T[] valores;</p>
+
+<p>valores = new T[n];</p>
+
+<p>ó</p>
+
+<p>T[] valores = { 0, 0};</p>
+
+<h2 id="aplicación-del-concepto-barajar-y-repartir-cartas">Aplicación del concepto (Barajar y Repartir Cartas)</h2>
+<h3 id="cartajava">Carta.java</h3>
+<pre class="hightlight">
+    <code class="java">  
+    package dev.rafaelaquino.core.cartas;
+
+    public class Carta {
+        private String cara;
+        private String palo;
+        
+        public Carta(String caraCarta, String paloCarta) {
+            cara = caraCarta;
+            palo = paloCarta;
+        }
+        
+        public String toString() {
+            return cara + " de " + palo;
+        }
+
+    }
+    </code>
+</pre>
+<h3 id="barajajava">Baraja.java</h3>
+<pre class="hightlight">
+    <code class="java">  
+    package dev.rafaelaquino.core.cartas;
+
+    import java.util.Random;
+
+    public class Baraja {
+        private Carta[] paquete;
+        private int cartaActual;
+        private static final int NUMERO_DE_CARTAS = 52;
+        
+        private static final Random generador = new Random();
+        
+        public Baraja() {
+            String[] caras = { "As", "Dos", "Tres", "Cuatro", "Cinco", "Seis",
+                            "Siete", "Ocho", "Nueve", "Diez", "Joto", "Quina", "Rey" }; 
+            String[] palos = { "Corazones", "Diamantes", "Treboles", "Espadas" };
+        
+            paquete = new Carta[NUMERO_DE_CARTAS];
+            cartaActual = 0;
+            
+            
+            /* 
+            * Aquí puede haber un poco de confusión
+            * Como funciona cuenta % 13?
+            * Por definición,  dividendo = (cociente * divisor) + modulo
+            * Despejando el modulo: modulo = dividendo - (cociente * divisor)
+            * Siempre que el dividendo sea menor que el divisor, el cociente será cero
+            * Lo cual da como resultado que el modulo sea igual al dividendo.
+            * Ejemplos:
+            * 0 mod 13 == 0 - ( 0 * 13 ) = 0
+            * 1 mod 13 == 1 - ( 0 * 13 ) = 1
+            * 2 mod 13 == 2 - ( 0 * 13 ) = 2 
+            */
+            for(int cuenta = 0; cuenta &lt; paquete.length; cuenta ++) {
+                paquete[cuenta] = new Carta(caras[cuenta % 13], palos[ cuenta / 13]);
+            }
+        }
+        
+        public void barajar() {
+            cartaActual = 0;
+            
+            for(int primera = 0; primera &lt; paquete.length; primera ++) {
+                int segunda = generador.nextInt(NUMERO_DE_CARTAS);
+                Carta temp = paquete[primera];
+                paquete[ primera ] = paquete[ segunda ];
+                paquete[ segunda ] = temp;
+            }
+        }
+        
+        public Carta repartir() {
+            if(cartaActual &lt; paquete.length ) {
+                return paquete[ cartaActual++ ];
+            }else {
+                return null;
+            }
+        }
+    }    
+    </code>
+</pre>
+<h3 id="juegodecartasjava">JuegoDeCartas.java</h3>
+<pre class="hightlight">
+    <code class="java">  
+    package dev.rafaelaquino.core.cartas;
+
+    public class JuegoDeCartas {
+
+        public static void main(String[] args) {
+            Baraja baraja = new Baraja();
+            for(int i = 0; i &lt; 100_000; i++) {
+                baraja.barajar();
+            }		
+            for( int i = 1; i &lt;= 52; i++ ) {
+                System.out.printf("%-19s ", baraja.repartir());
+                if( i % 4 == 0 ) {
+                    System.out.println();
+                }
+            }
+        }
+    }    
     </code>
 </pre>
 
@@ -111,7 +290,6 @@
         </footer>
       </div>
   <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
-   
     <div class="navbar-item">
           
           
@@ -125,8 +303,10 @@
     
         <a href="/es/aprendizaje.html" class="main-nav">Área de Aprendizaje</a>
     
+    
 
-          
+        
+        
       </div>
 
     <a class="navbar-item right-corner" style="background-color: black;">
@@ -142,8 +322,10 @@
   
           
         </div>
+        
       </div>
-
+      <div class="navbar-item">v0.0.1</div> 
+      <div class="navbar-item">Λ</div> 
   </nav>
    
   
