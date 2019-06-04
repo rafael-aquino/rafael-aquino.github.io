@@ -49,7 +49,7 @@
         <div class="container">
           <div class="content has-text-centered">
             <p>
-              by Rafael E. Aquino. The source code is licensed
+              Rafael Aquino. The source code is licensed
               <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
               is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
             </p>
@@ -59,22 +59,9 @@
 
         </footer>
       </div>
-  <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
+      <!-- <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
     <div class="navbar-item">
-            
-          
-    
-        <a href="/" class="main-nav">Home</a>
-    
-        <a href="/el-salvador.html" class="main-nav">El Salvador</a>
-    
-        <a href="/me.html" class="main-nav">Me</a>
-    
-        <a href="/learn.html" class="main-nav">Learning Area</a>
-    
 
-        
-        
         
       </div>
 
@@ -83,10 +70,55 @@
     </a>
     <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          Avaible languages
+         
         </a>
     
         <div class="navbar-dropdown">
+
+        </div>
+        
+      </div>
+      
+      
+  </nav> -->
+
+
+  <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <div class="navbar-item" style="padding-left: 2em;">
+                <button id="switch" onclick="toggleState(this)" />
+        </div>
+  
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span class="white" aria-hidden="true"></span>
+            <span class="white" aria-hidden="true"></span>
+            <span class="white" aria-hidden="true"></span>
+        </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+          
+        
+    
+        <a href="/" class="navbar-item white">Home</a>
+    
+        <a href="/el-salvador.html" class="navbar-item white">El Salvador</a>
+    
+        <a href="/me.html" class="navbar-item white">Me</a>
+    
+        <a href="/learn.html" class="navbar-item white">Learning Area</a>
+    
+
+      
+      
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link skyblue">
+            Avaible languages
+          </a>
+  
+          <div class="navbar-dropdown">
             
   
           
@@ -114,12 +146,18 @@
 
      
         
+          </div>
         </div>
-        
       </div>
-      <div class="navbar-item">v0.0.1</div> 
-      <div class="navbar-item">Λ</div> 
+  
+      <div class="navbar-end">
+        <!-- <div class="navbar-item">v0.0.1</div>  -->
+ 
+      </div>
+    </div>
   </nav>
+  
+
    
   
 
@@ -131,6 +169,32 @@
   <script src="/assets/js/theme.js"></script>    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
   <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+
+});
+  </script>    
+
 </body>
 
 </html>

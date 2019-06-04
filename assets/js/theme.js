@@ -33,9 +33,9 @@ function set_style_from_cookie()
 var css_title = get_cookie( style_cookie_name );
 if (css_title.length) {
 if(css_title == 'dark'){
-document.getElementById('btn').classList.add('off');
+document.getElementById('switch').classList.add('off');
 }else{
-document.getElementById('btn').classList.add('on');
+document.getElementById('switch').classList.add('on');
 }
 
 

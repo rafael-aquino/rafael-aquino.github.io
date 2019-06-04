@@ -20,7 +20,16 @@ body {
 .lion {
   background-color: black; }
 
-#btn {
+.white {
+  color: white; }
+
+.skyblue {
+  color: skyblue; }
+
+#navbarBasicExample {
+  background-color: black; }
+
+#switch {
   background-image: url("/assets/images/spotlight_off.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -31,7 +40,7 @@ body {
   cursor: pointer;
   background-color: black; }
 
-#btn:hover {
+#switch:hover {
   background-color: black; }
 
 ul, h1, h2, h3, p {

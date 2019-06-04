@@ -279,7 +279,7 @@ A que me refiero, bueno algunas veces podemos decir que el estado de un usuario 
         <div class="container">
           <div class="content has-text-centered">
             <p>
-              by Rafael E. Aquino. The source code is licensed
+              Rafael Aquino. The source code is licensed
               <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
               is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
             </p>
@@ -289,23 +289,9 @@ A que me refiero, bueno algunas veces podemos decir que el estado de un usuario 
 
         </footer>
       </div>
-  <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
+      <!-- <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
     <div class="navbar-item">
-          
-          
-          
-    
-        <a href="/es" class="main-nav">Inicio</a>
-    
-        <a href="/es/el-salvador.html" class="main-nav">El Salvador</a>
-    
-        <a href="/es/rafael.html" class="main-nav">Hola</a>
-    
-        <a href="/es/aprendizaje.html" class="main-nav">Área de Aprendizaje</a>
-    
-    
 
-        
         
       </div>
 
@@ -314,19 +300,71 @@ A que me refiero, bueno algunas veces podemos decir que el estado de un usuario 
     </a>
     <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          Idiomas disponibles
+         
         </a>
     
         <div class="navbar-dropdown">
-            
-  
-          
+
         </div>
         
       </div>
-      <div class="navbar-item">v0.0.1</div> 
-      <div class="navbar-item">Λ</div> 
+      
+      
+  </nav> -->
+
+
+  <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <div class="navbar-item" style="padding-left: 2em;">
+                <button id="switch" onclick="toggleState(this)" />
+        </div>
+  
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span class="white" aria-hidden="true"></span>
+            <span class="white" aria-hidden="true"></span>
+            <span class="white" aria-hidden="true"></span>
+        </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        
+        
+        
+    
+        <a href="/es" class="navbar-item white">Inicio</a>
+    
+        <a href="/es/el-salvador.html" class="navbar-item white">El Salvador</a>
+    
+        <a href="/es/rafael.html" class="navbar-item white">Hola</a>
+    
+        <a href="/es/aprendizaje.html" class="navbar-item white">Área de Aprendizaje</a>
+    
+    
+
+      
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link skyblue">
+            Idiomas disponibles
+          </a>
+  
+          <div class="navbar-dropdown">
+            
+  
+          
+          </div>
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+        <!-- <div class="navbar-item">v0.0.1</div>  -->
+ 
+      </div>
+    </div>
   </nav>
+  
+
    
   
 
@@ -338,6 +376,32 @@ A que me refiero, bueno algunas veces podemos decir que el estado de un usuario 
   <script src="/assets/js/theme.js"></script>    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
   <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+
+});
+  </script>    
+
 </body>
 
 </html>
