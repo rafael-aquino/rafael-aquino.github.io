@@ -16,12 +16,12 @@
 
 
 
-<link rel="stylesheet" type="text/css" title="light" href="/assets/css/normalize.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+<!-- <link rel="stylesheet" type="text/css" title="light" href="/assets/css/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"> -->
 <link rel="stylesheet" type="text/css" title="light" href="/assets/css/light.css">
 <link rel="alternate stylesheet" type="text/css" title="dark" href="/assets/css/dark.css">
 <link rel="shortcut icon" href="/assets/images/hairstyle.png" >
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/nord.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/nord.min.css"> -->
 
 
 
@@ -267,6 +267,60 @@ A que me refiero, bueno algunas veces podemos decir que el estado de un usuario 
     </code>
 </pre>
 
+<h2 id="herencia">Herencia</h2>
+<p>Es una de las caracteristicas principales de la programación orientada a objetos, es utilizada para reutilizar funcionalidades existentes, mejorando o simplemente modificando las capacidades actuales.
+Una subclase puede agregar sus propios campos y métodos. Una subclase es más especifica que su superclase y representa un grupo más especializado de objetos.</p>
+
+<h2 id="ejemplo-de-herencia">Ejemplo de herencia</h2>
+<h3 id="empleadojava">Empleado.java</h3>
+<pre class="hightlight">
+    <code class="java">  
+        public class Empleado{
+            private String nombre;
+            
+            public Empleado(){}
+
+            public String getNombre(){
+                return this.nombre;
+            }
+
+            public void setNombre(String nombre){
+                this.nombre = nombre;
+            }    
+        }
+    </code>
+</pre>
+<h3 id="empleadosueldobasejava">EmpleadoSueldoBase.java</h3>
+<pre class="hightlight">
+    <code class="java">  
+        public class EmpleadoSueldoBase extends Empleado{
+
+            public EmpleadoSueldoBase(){
+                super();
+            }
+        }
+    </code>
+</pre>
+<h3 id="testjava">Test.java</h3>
+<pre class="hightlight">
+    <code class="java">  
+        public class Test{
+            public static void main(String args[]){
+                EmpleadoSueldoBase empleado = new EmpleadoSueldoBase();
+                empleado.setNombre("Rafael Aquino");
+                System.out.println(empleado.getClass().getName() + ": " + empleado.getNombre());
+                System.out.println(empleado instanceof Empleado);
+                System.out.println(empleado instanceof EmpleadoSueldoBase);
+            }
+        }
+    </code>
+</pre>
+
+<p>Como podemos observar, al hacer uso de la herencia con la palabra extends la clase EmpleadoSueldoBase ahora es capaz de utilizar métodos que fueron declarados en su super clase. Tambien podemos utilizar el operador typeof que nos devuelve verdadero si el objeto pertenece a la clase que se le indica.</p>
+
+<h2 id="polimorfismo">Polimorfismo</h2>
+<p>Esta técnica nos permite programar en forma general; es decir, nos permite escribir programas que procesen objetos que compartan la misma superclase</p>
+
 
 
 
@@ -287,7 +341,6 @@ A que me refiero, bueno algunas veces podemos decir que el estado de un usuario 
             </p>
           </div>
         </div>
-
 
         </footer>
       </div>
@@ -376,7 +429,7 @@ A que me refiero, bueno algunas veces podemos decir que el estado de un usuario 
 
     
   <script src="/assets/js/theme.js"></script>    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>  -->
   <script>hljs.initHighlightingOnLoad();</script>
   <script>
   document.addEventListener('DOMContentLoaded', () => {
