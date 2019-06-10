@@ -18,16 +18,16 @@ body {
   padding: 1em 0; }
 
 .lion {
-  background-color: #202020; }
+  background-color: transparent; }
 
-.white {
+.solid .white {
   color: white; }
 
 .skyblue {
   color: skyblue; }
 
 #navbarBasicExample {
-  background-color: #202020; }
+  background-color: transparent; }
 
 #switch {
   background-image: url("/assets/images/spotlight_off.png");
@@ -38,10 +38,10 @@ body {
   width: 32px;
   border: none;
   cursor: pointer;
-  background-color: #202020; }
+  background-color: transparent; }
 
 #switch:hover {
-  background-color: #202020; }
+  background-color: transparent; }
 
 ul, h1, h2, h3, p {
   margin: 0.5em 2em; }
@@ -70,4 +70,14 @@ ul, h1, h2, h3, p {
   /* Footer height */ }
 
 .navbar-dropdown, .navbar-link, .navbar-item, .navbar-item:hover {
-  background-color: #202020; }
+  background-color: transparent; }
+
+.solid {
+  background-color: #202020;
+  transition: background-color 1s ease 0s; }
+
+#x > a:hover {
+  background-color: transparent; }
+
+.lang {
+  padding-left: 1.5em; }

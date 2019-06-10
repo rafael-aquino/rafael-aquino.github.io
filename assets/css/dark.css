@@ -18,7 +18,7 @@ body {
   padding: 1em 0; }
 
 .lion {
-  background-color: #202020; }
+  background-color: transparent; }
 
 .white {
   color: white; }
@@ -27,13 +27,13 @@ body {
   color: skyblue; }
 
 #navbarBasicExample {
-  background-color: #202020; }
+  background-color: transparent; }
 
 #switch {
   background-image: url("/assets/images/spotlight.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-color: #202020;
+  background-color: transparent;
   /* put the height and width of your image here */
   height: 32px;
   width: 32px;
@@ -41,7 +41,7 @@ body {
   cursor: pointer; }
 
 #switch:hover {
-  background-color: #202020; }
+  background-color: transparent; }
 
 ul, h1, h2, h3, p {
   margin: 0.5em 2em; }
@@ -54,7 +54,10 @@ ul, h1, h2, h3, p {
 
 #page-container {
   position: relative;
-  min-height: 100vh; }
+  min-height: 100vh;
+  /*     max-width: 70%;
+      margin-left: auto;
+      margin-right: auto; */ }
 
 #content-wrap {
   padding-top: 2em;
@@ -71,4 +74,14 @@ ul, h1, h2, h3, p {
   background-color: #2d2d2d; }
 
 .navbar-dropdown, .navbar-link, .navbar-item, .navbar-item:hover {
-  background-color: #202020; }
+  background-color: transparent; }
+
+.solid {
+  background-color: #202020;
+  transition: background-color 1s ease 0s; }
+
+#x > a:hover {
+  background-color: transparent; }
+
+.lang {
+  padding-left: 1.5em; }

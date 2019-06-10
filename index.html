@@ -33,61 +33,10 @@
 
 
 <body onload="set_style_from_cookie()">
-    <div id="page-container">
-        <div id="content-wrap">
-            <div>
-    <section class="hello">
-        <h1 class="me">RAFAEL AQUINO</h1>        
-        <p>I want help you to create your dream life by sharing my experience and knowledge with you.</p>
-        <p>Develop a passion for learning. If you do, you will never cease to grow.</p>
-        <p class="whoami">I'm a Software Developer in San Salvador City, student of life. Always learning.</p>
-    </section>
-</div>
-        </div>
-        <footer id="footer" class="footer">
-            
-        <div class="container">
-          <div class="content has-text-centered">
-            <p>
-              Rafael Aquino. The source code is licensed
-              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
-          </div>
-        </div>
-
-        </footer>
-      </div>
-      <!-- <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
-    <div class="navbar-item">
-
-        
-      </div>
-
-    <a class="navbar-item right-corner" style="background-color: black;">
-        <input  type="button" id="btn" value=""  onclick="toggleState(this)" />
-    </a>
-    <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-         
-        </a>
-    
-        <div class="navbar-dropdown">
-
-        </div>
-        
-      </div>
-      
-      
-  </nav> -->
-
-
-  <nav class="navbar is-fixed-top lion" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <div class="navbar-item" style="padding-left: 2em;">
-                <button id="switch" onclick="toggleState(this)" />
-        </div>
   
+        <nav id="header" class="navbar is-fixed-top lion lang" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span class="white" aria-hidden="true"></span>
             <span class="white" aria-hidden="true"></span>
@@ -97,7 +46,35 @@
   
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-          
+          <div class="navbar-item">
+    Avaible languages&nbsp;&nbsp;
+    
+    
+            
+            
+                     
+    
+        
+            <a href="/">English &nbsp;  
+                          
+            </a> &nbsp;&nbsp;
+        
+        
+            
+                     
+    
+        
+            <a href="/es/">Español &nbsp;  
+                          
+            </a> &nbsp;&nbsp;
+        
+        
+</div>
+      </div>
+  
+      <div class="navbar-end" id="x">
+        <!-- <div class="navbar-item">v0.0.1</div>  -->
+                  
         
     
         <a href="/" class="navbar-item white">Home</a>
@@ -111,48 +88,58 @@
 
       
       
-  
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link skyblue">
-            Avaible languages
-          </a>
-  
-          <div class="navbar-dropdown">
-            
-  
-          
-          
-                   
-  
-        <a class="navbar-item" href="/">English &nbsp;  
-            
-          
-          </a> 
+        <div class="navbar-item">
+            <button id="switch" onclick="toggleState(this)" />
+    </div>
 
-     
-        
-          
-                   
-  
-        <a class="navbar-item" href="/es/">Español &nbsp;  
-            
-          
-          </a> 
-
-     
-        
-          </div>
-        </div>
-      </div>
-  
-      <div class="navbar-end">
-        <!-- <div class="navbar-item">v0.0.1</div>  -->
- 
       </div>
     </div>
   </nav>
   
 
+      <div id="page-container">
+          <div id="content-wrap">
+              <section class="hello">
+    <h1 class="me">RAFAEL AQUINO</h1>   
+    <p>Develop a passion for learning. If you do, you will never cease to grow.</p>
+    <p class="whoami">Software Developer in San Salvador City, student of life. Always learning.</p>
+</section>
+<section class="portfolio">
+        <h1>PORTFOLIO</h1>   
+        <div class="container is-fluid">
+                <div class="columns">
+                        <div class="column">
+                                <label for="tu">Tecia Urbina - App for Law firm; I did it as a SPA with Angular 7 and firebase.</label>
+                                <a id="tu" href="https://teciaurbina.web.app/"><img src="/assets/images/TECIAURBINA.png"></a>
+                        </div>
+                        <div class="column">
+                               
+                        </div>
+                </div>
+              </div>        
+
+</section>
+
+
+
+          </div>
+          <footer id="footer" class="footer">
+              
+        <div class="container">
+          <div class="content has-text-centered">
+            <p>
+              Rafael Aquino. The source code is licensed
+              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+          </div>
+        </div>
+
+          </footer>
+        </div>
+
+
+     
    
   
 
@@ -169,12 +156,13 @@
 
 // Get all "navbar-burger" elements
 const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
+var header = document.getElementById("header");
 // Check if there are any navbar burgers
 if ($navbarBurgers.length > 0) {
+ 
   $navbarBurgers.forEach( el => {
     el.addEventListener('click', () => {
-
+      header.classList.add("solid");   
       // Get the target from the "data-target" attribute
       const target = el.dataset.target;
       const $target = document.getElementById(target);
@@ -189,7 +177,20 @@ if ($navbarBurgers.length > 0) {
 
 });
   </script>    
-
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky || window.screen.width < 1026) {
+            header.classList.add("solid");           
+          } else {            
+              header.classList.remove("solid");                        
+          }
+        }
+        </script>
 </body>
 
 </html>
