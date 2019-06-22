@@ -160,15 +160,16 @@ article {
 a {
   color: #fb4b4e; }
 
-ul {
+#main article ul {
   list-style: square inside url("../images/diamond.png");
   padding-left: 0; }
+  #main article ul li {
+    margin: 1.5em 0; }
+#main article p {
+  line-height: 1.75em; }
 
 h2 {
   color: #3d0814; }
-
-#services ~ ul li {
-  margin: 1em 0; }
 
 .responsive {
   width: 45%;
