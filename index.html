@@ -1,196 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" class="has-navbar-fixed-top">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Rafael Aquino">
-  
-
-    
-    <meta property="og:description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador.">
-    <meta property="og:title" content="Rafael Aquino">
-    <meta name="twitter:title" content="Rafael Aquino">
-    <meta name="twitter:description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador.">
     <title>Rafael Aquino</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/mdn.css">
 
-
-
-<link rel="stylesheet" type="text/css" title="light" href="/assets/css/normalize.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-<link rel="stylesheet" type="text/css" title="light" href="/assets/css/light.css">
-<link rel="alternate stylesheet" type="text/css" title="dark" href="/assets/css/dark.css">
-<link rel="shortcut icon" href="/assets/images/hairstyle.png" >
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/nord.min.css">
-
-
-
-
- 
-<meta name="description" content="Rafael Aquino is a student of life. Always learning. Also, an wantrepreneur and software developer based in El Salvador." />
+    <meta name="author" content="Rafael Aquino"> 
+    <meta property="og:title" content="Rafael Aquino">
+    <meta property="og:description" content="Rafael Aquino is a student of life. Always learning. Also, an Entrepreneur and Software Developer based in El Salvador.">
+    <meta name="twitter:title" content="Rafael Aquino">
+    <meta name="twitter:description" content="Rafael Aquino is a student of life. Always learning. Also, an Entrepreneur and Software Developer based in El Salvador.">
     
+    <title>Rafael Aquino</title>
+    <meta name="description" content="Rafael Aquino is a student of life. Always learning. Also, an Entrepreneur and Software Developer based in El Salvador.">
 </head>
-
-
-<body onload="set_style_from_cookie()">
-  
-        <nav id="header" class="navbar is-fixed-top lion lang" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span class="white" aria-hidden="true"></span>
-            <span class="white" aria-hidden="true"></span>
-            <span class="white" aria-hidden="true"></span>
-        </a>
-    </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-          <div class="navbar-item">
-    Avaible languages&nbsp;&nbsp;
-    
-    
-            
-            
-                     
-    
-        
-            <a href="/">English &nbsp;  
-                          
-            </a> &nbsp;&nbsp;
-        
-        
-            
-                     
-    
-        
-            <a href="/es/">Español &nbsp;  
-                          
-            </a> &nbsp;&nbsp;
-        
-        
-</div>
-      </div>
-  
-      <div class="navbar-end" id="x">
-        <!-- <div class="navbar-item">v0.0.1</div>  -->
-                  
-        
-    
-        <a href="/" class="navbar-item white">Home</a>
-    
-        <a href="/el-salvador.html" class="navbar-item white">El Salvador</a>
-    
-        <a href="/me.html" class="navbar-item white">Me</a>
-    
-        <a href="/learn.html" class="navbar-item white">Learning Area</a>
-    
-
-      
-      
-        <div class="navbar-item">
-            <button id="switch" onclick="toggleState(this)" />
-    </div>
-
-      </div>
-    </div>
-  </nav>
-  
-
-      <div id="page-container">
-          <div id="content-wrap">
-              <section class="hello">
-    <h1 class="me">RAFAEL AQUINO</h1>   
-    <p>Develop a passion for learning. If you do, you will never cease to grow.</p>
-    <p class="whoami">Software Developer in San Salvador City, student of life. Always learning.</p>
+<body>
+<header class="header">
+    <a href="index.html" class="logo">A</a>
+    <nav>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a onClick="closeMenu()" href="index.html#portfolio">Portfolio</a></li>
+            <li><a onClick="closeMenu()" href="index.html#contact">Contact</a></li>
+            <li><a onClick="closeMenu()" href="el-salvador.html">El Salvador</a></li>
+<!--             <li><a onClick="closeMenu()" href="blog.html">Blog</a></li> -->
+        </ul>
+    </nav>
+</header>
+      <main id="main">
+        <article>
+<section>
+    <h2 id="hi">Hello</h2>
+    <img class="me" src="assets/images/me.jpg" alt="Rafael" />
+    <p>I'm Rafael Aquino a full-stack software developer specializing in Java.</p>
 </section>
-<section class="portfolio">
-        <h1>PORTFOLIO</h1>   
-        <div class="container is-fluid">
-                <div class="columns">
-                        <div class="column">
-                                <label for="tu">Tecia Urbina - App for Law firm; I did it as a SPA with Angular 7 and firebase.</label>
-                                <a id="tu" href="https://teciaurbina.web.app/"><img src="/assets/images/TECIAURBINA.png"></a>
-                        </div>
-                        <div class="column">
-                               
-                        </div>
-                </div>
-              </div>        
-
+<section>
+    <h2 id="portfolio">Portfolio</h2>
+    <p>Here's some of my published projects.</p>
+    <a href="https://teciaurbina.web.app" title="Law Firm Web Site Developed by Rafael Aquino">
+        <img class="responsive" src="assets/images/tecia.png" />
+    </a>
+</section>
+<section>
+    <h2 id="services">Services</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Mobile Development Android</li>
+        <li>Wordpress Custom Theme Creation</li>
+        <li>Digital Transformation Consulting</li>
+        <li>Static Web Pages <sup class="free"><a href="#">Free Hosting</a></sup></li>
+    </ul>
 </section>
 
+<h2 id="contact">Contact</h2>
+
+<ul>
+  <li>Email: me@rafaelaquino.dev</li>
+  <li>GitHub: <a href="https://github.com/rafael-aquino">rafael-aquino</a></li>
+  <li>Twitter: <a href="https://twitter.com/rafaelaquinodev">rafaelaquinodev</a></li>
+  <li>LinkedIn: <a href="https://sv.linkedin.com/in/rafaelaquinodev">rafaelaquinodev</a></li>
+  <li>TopCoder: <a href="https://www.topcoder.com/members/rafael.aquino/">rafael.aquino</a></li>
+  <li>Stack Overflow: <a href="https://stackoverflow.com/users/11473775/rafael-aquino">rafael-aquino</a></li>
+  <li>Medium: <a href="https://medium.com/@rafael.aquino">rafael.aquino</a></li>
+  <li>Freelancer <a href="https://www.freelancer.com/u/rafaelaquinodev">rafaelaquinodev</a></li>
+</ul>
 
 
-          </div>
-          <footer id="footer" class="footer">
-              
-        <div class="container">
-          <div class="content has-text-centered">
-            <p>
-              Rafael Aquino. The source code is licensed
-              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
-          </div>
-        </div>
+        </article>
 
-          </footer>
-        </div>
-
-
+  
+      </main>
+  
      
-   
   
-
-
-
-
-
-    
-  <script src="/assets/js/theme.js"></script>    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> 
-  <script>hljs.initHighlightingOnLoad();</script>
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-
-// Get all "navbar-burger" elements
-const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-var header = document.getElementById("header");
-// Check if there are any navbar burgers
-if ($navbarBurgers.length > 0) {
- 
-  $navbarBurgers.forEach( el => {
-    el.addEventListener('click', () => {
-      header.classList.add("solid");   
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
-
-    });
-  });
-}
-
-});
-  </script>    
-    <script>
-        window.onscroll = function() {myFunction()};
-        
-        var header = document.getElementById("header");
-        var sticky = header.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset > sticky || window.screen.width < 1026) {
-            header.classList.add("solid");           
-          } else {            
-              header.classList.remove("solid");                        
-          }
-        }
-        </script>
+      <footer id="footer">
+            <p>
+                Rafael Aquino. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+      </footer>  
+      <script src="assets/js/mdn.js"></script>
 </body>
-
 </html>
